@@ -1,0 +1,1 @@
+Aprendendo como funcionará o uso do Git e do GitHub e como estruturar as pastas de exercícios com seus atuais objetivos, além de pushes e pulls.
