@@ -1,0 +1,51 @@
+div:hover:nth-of-type(1){
+
+  border-block-color: red;
+  border-style: groove;
+
+}
+
+div:hover:nth-of-type(2) {
+
+  border-block-color: purple;
+  border-style: groove;
+}
+
+div:hover:nth-of-type(3) {
+
+  border-block-color: yellow;
+  border-style: groove;
+
+}
+
+div:hover:nth-of-type(4) {
+
+  border-block-color: blue;
+  border-style: groove;
+
+}
+
+div:hover:nth-of-type(5) {
+
+  border-style: groove;
+  border-block-color: pink;
+
+}
+
+h3 {
+
+  background-color: chocolate;
+
+}
+
+div:nth-of-type(3) {
+
+  font-size: larger;
+
+}
+
+div:nth-child(odd) {
+
+  font-style: italic;
+
+}
