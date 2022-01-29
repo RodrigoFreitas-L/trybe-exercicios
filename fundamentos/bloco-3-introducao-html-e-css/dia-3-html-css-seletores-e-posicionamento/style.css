@@ -1,51 +1,84 @@
-div:hover:nth-of-type(1){
+.yellow-bg {
 
-  border-block-color: red;
-  border-style: groove;
-
-}
-
-div:hover:nth-of-type(2) {
-
-  border-block-color: purple;
-  border-style: groove;
-}
-
-div:hover:nth-of-type(3) {
-
-  border-block-color: yellow;
-  border-style: groove;
+  background-color: yellow;
 
 }
 
-div:hover:nth-of-type(4) {
+.impar li:nth-child(even) {
 
-  border-block-color: blue;
-  border-style: groove;
-
-}
-
-div:hover:nth-of-type(5) {
-
-  border-style: groove;
-  border-block-color: pink;
+  color: green;
 
 }
 
-h3 {
+.par li:nth-child(odd) {
 
-  background-color: chocolate;
-
-}
-
-div:nth-of-type(3) {
-
-  font-size: larger;
+  text-transform: uppercase;
 
 }
 
-div:nth-child(odd) {
+.headers {
 
-  font-style: italic;
+  color: red;
+
+}
+
+.headers em {
+
+  font-size: 40px;
+  border: 1px solid black;
+
+}
+
+li {
+
+  font-size: 20px;
+
+}
+
+li em {
+
+  font-weight: bold;
+
+}
+
+.program-language li:nth-of-type(1),
+.program-language li:nth-of-type(2),
+.program-language li:nth-of-type(3) {
+
+  color: blue;
+
+}
+
+.program-language li:nth-of-type(2),
+.program-language li:nth-of-type(3) {
+
+  background-color: pink;
+
+}
+
+/* #stackoverflow {
+
+////////Não possuo conta na adobe pra pegar a fonte :/ criarei
+
+} */
+
+#trybe:hover {
+
+  font-family: Arial, Helvetica, sans-serif;
+  font: bold;
+
+}
+
+#mozilla:hover {
+
+  font-family: 'Zilla Slab', serif;
+  font: bold;
+
+}
+
+#devdocs:hover {
+
+  font-family: 'Ubuntu', sans-serif;
+  font: bold;
 
 }
