@@ -65,6 +65,7 @@ li em {
 #trybe:hover {
 
   font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
   font: bold;
 
 }
@@ -82,3 +83,17 @@ li em {
   font: bold;
 
 }
+
+ul:hover:nth-of-type(6){
+
+  background-color: violet;
+
+}
+
+ul:hover:nth-of-type(7) {
+
+  background-color: brown;
+
+}
+
+/* #6ª */

@@ -1,0 +1,36 @@
+body {
+    font-size: 16px;
+}
+
+h1 {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 65px;
+    font-weight: bold;
+    color: orange;    
+}
+
+.listp_class {
+    line-height: 35px;
+    font-style: italic;
+    text-align: center;
+    text-decoration: solid; 
+    background-color:rgb(24, 224, 107)
+}
+
+p {
+    font-weight: 600;
+    font-size: 3em;
+}
+
+#list_red {
+    background-color: rgb(173, 10, 10);
+}
+
+#list_white {
+    background-color: white;
+}
+
+#list_blue {
+    background-color: rgb(88, 88, 226);
+}
