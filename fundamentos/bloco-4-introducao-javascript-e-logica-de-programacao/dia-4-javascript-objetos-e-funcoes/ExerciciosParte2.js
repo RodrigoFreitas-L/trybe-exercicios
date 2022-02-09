@@ -145,3 +145,25 @@
 // for (let index = 0; index < moradores.blocoDois.length; index += 1) {
 //   console.log(moradores.blocoDois[index].nome + ' ' + moradores.blocoDois[index].sobrenome);
 // }
+
+
+// function sumNumbers(n) {
+//   let sum = n;
+//   for (let i = 0; i < n; i += 1) {
+//     sum += i;
+//   }
+//   return sum;
+// }
+
+// console.log(sumNumbers(10));
+
+// let valorFinal = 0;
+
+// function somatorio(n) {
+//     for (let i = 0; i <= n; i +=1) {
+//       valorFinal += i;
+//     }
+//     return valorFinal;
+// }
+
+// console.log(somatorio(10));
