@@ -40,7 +40,7 @@ correctTitle();
 
 function pUpperCase() {
   let upperCase = document.getElementsByTagName('p');
-  for (let i = 0; i < upperCase.length; i += 1) {
+  for (let i in upperCase) {
     upperCase[i].innerText = upperCase[i].innerText.toUpperCase();
   }
 }
