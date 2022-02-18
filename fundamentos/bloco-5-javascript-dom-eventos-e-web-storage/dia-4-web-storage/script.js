@@ -1,25 +1,193 @@
-const button = document.getElementById('add-button');
-const input = document.getElementById('phrases-input');
-const list = document.getElementById('phrases-list');
-
-function insertPhraseInDOM() {
-  const phrasesList = JSON.parse(sessionStorage.getItem('phrases'));
-  const listLength = phrasesList.length - 1;
-  const phraseText = phrasesList[listLength];
-  const phrase = document.createElement('li');
-  phrase.innerText = phraseText;
-  list.appendChild(phrase);
-}
-
-function addPhraseToSessionStorage() {
-  if (sessionStorage.getItem('phrases') === null) {
-    sessionStorage.setItem('phrases', JSON.stringify([]));
+window.onload = function() {
+  function getBackgroundColor(color) {
+    let inside = document.querySelector('.content')
+    inside.style.backgroundColor = color
+    localStorage.setItem("backgroundColor", color)
   }
-  const oldList = JSON.parse(sessionStorage.getItem('phrases'));
-  const phraseText = input.value;
-  oldList.push(phraseText);
-  sessionStorage.setItem('phrases', JSON.stringify(oldList));
-  insertPhraseInDOM();
-}
 
-button.addEventListener('click', addPhraseToSessionStorage);
+  function getFontColor(color) {
+    let paragraph = document.querySelectorAll('.paragraph')
+    for (let i = 0; i < paragraph.length; i += 1) {
+      paragraph[i].style.color = color
+    }
+    localStorage.setItem('fontColor', color)
+  }
+
+  function getFontSize(size) {
+    let paragraph = document.querySelectorAll('.paragraph')
+    for (let i = 0; i < paragraph.length; i += 1) {
+      paragraph[i].style.fontSize = size;
+    }
+    localStorage.setItem('fontSize', size);
+  }
+
+  function setLineHeight(space) {
+    let paragraph = document.querySelectorAll('.paragraph')
+    for (let i = 0; i < paragraph.length; i += 1) {
+      paragraph[i].style.lineHeight = space;
+    }
+    localStorage.setItem('lineHeight', space);
+  }
+
+  function setFontFamily(fontName) {
+    let paragraph = document.querySelectorAll('.paragraph')
+    for (let i = 0; i < paragraph.length; i += 1) {
+      paragraph[i].style.fontFamily = fontName;
+    }
+    localStorage.setItem('fontFamily', fontName);
+  }
+
+  let bgColorButtons = document.querySelectorAll('#background-color>button')
+  for (let i = 0; i < bgColorButtons.length; i += 1) {
+    bgColorButtons[i].addEventListener('click', function(event) {
+      getBackgroundColor(event.target.innerHTML)
+    })
+  }
+
+  let fontColorButton = document.querySelectorAll('#font-color>button')
+  for (let i = 0; i < fontColorButton.length; i += 1) {
+    fontColorButton[i].addEventListener('click', function(event) {
+      getFontColor(event.target.innerHTML)
+    })
+  }
+
+  let fontSizeButton = document.querySelectorAll('#font-size>button')
+  for (let i = 0; i < fontSizeButton.length; i += 1) {
+    fontSizeButton[i].addEventListener('click', function(event) {
+      getFontSize(event.target.innerHTML)
+    })
+  }
+
+  let lineHeightButton = document.querySelectorAll('#line-height>button')
+  for (let i = 0; i < lineHeightButton.length; i += 1) {
+    lineHeightButton[i].addEventListener('click', function(event) {
+      setLineHeight(event.target.innerHTML)
+    })
+  }
+
+  let fontFamilyButton = document.querySelectorAll('#font-family>button')
+  for (let i = 0; i < fontFamilyButton.length; i += 1) {
+    fontFamilyButton[i].addEventListener('click', function(event) {
+      setFontFamily(event.target.innerHTML)
+    })
+  }
+
+  function start() {
+    let backgroundColor = localStorage.getItem('backgroundColor');
+    if (backgroundColor) getBackgroundColor(backgroundColor);
+
+    let fontColor = localStorage.getItem('fontColor');
+    if (fontColor) getFontColor(fontColor);
+
+    let fontSize = localStorage.getItem('fontSize');
+    if (fontSize) getFontSize(fontSize);
+
+    let lHeight = localStorage.getItem('spaceLines');
+    if (lHeight) setLineHeight(lHeight);
+
+    let fontFamily = localStorage.getItem('fontFamily');
+    if (fontFamily) setFontFamily(fontFamily);
+
+  }
+
+  start();
+};
+
+// window.onload = function() {
+//       function setBackgroundColor(color) {
+//         let content = document.querySelector(".content")
+//         content.style.backgroundColor = color
+//         localStorage.setItem("backgroundColor", color)
+//       }
+
+//       function setFontColor(color) {
+//         let paragraphs = document.querySelectorAll(".paragraph")
+//         for (let index = 0; index < paragraphs.length; index += 1) {
+//           paragraphs[index].style.color = color
+//         }
+//         localStorage.setItem("fontColor", color)
+//       }
+
+//       function setFontSize(size) {
+//         let paragraphs = document.querySelectorAll(".paragraph")
+//         for (let index = 0; index < paragraphs.length; index += 1) {
+//           paragraphs[index].style.fontSize = size
+//         }
+//         localStorage.setItem("fontSize", size)
+//       }
+
+//       function setLineHeight(height) {
+//         let paragraphs = document.querySelectorAll(".paragraph")
+//         for (let index = 0; index < paragraphs.length; index += 1) {
+//           paragraphs[index].style.lineHeight = height
+//         }
+//         localStorage.setItem("lineHeight", height)
+//       }
+
+//       function setFontFamily(family) {
+//         let paragraphs = document.querySelectorAll(".paragraph")
+//         for (let index = 0; index < paragraphs.length; index += 1) {
+//           paragraphs[index].style.fontFamily = family
+//         }
+//         localStorage.setItem("fontFamily", family)
+//       }
+
+//       // background-color
+//       let backgroundColorButtons = document.querySelectorAll("#background-color>button")
+//       for (let index = 0; index < backgroundColorButtons.length; index += 1) {
+//         backgroundColorButtons[index].addEventListener("click", function(event) {
+//           setBackgroundColor(event.target.innerHTML)
+//         })
+//       }
+
+//       // font-color
+//       let fontColorButtons = document.querySelectorAll("#font-color>button")
+//       for (let index = 0; index < fontColorButtons.length; index += 1) {
+//         fontColorButtons[index].addEventListener("click", function(event) {
+//           setFontColor(event.target.innerHTML)
+//         })
+//       }
+
+//       // font-size
+//       let fontSizeButtons = document.querySelectorAll("#font-size>button")
+//       for (let index = 0; index < fontSizeButtons.length; index += 1) {
+//         fontSizeButtons[index].addEventListener("click", function(event) {
+//           setFontSize(event.target.innerHTML)
+//         })
+//       }
+
+//       // line-height
+//       let lineHeightButtons = document.querySelectorAll("#line-height>button")
+//       for (let index = 0; index < lineHeightButtons.length; index += 1) {
+//         lineHeightButtons[index].addEventListener("click", function(event) {
+//           setLineHeight(event.target.innerHTML)
+//         })
+//       }
+
+//       // font-family
+//       let fontFamilyButtons = document.querySelectorAll("#font-family>button")
+//       for (let index = 0; index < fontFamilyButtons.length; index += 1) {
+//         fontFamilyButtons[index].addEventListener("click", function(event) {
+//           setFontFamily(event.target.innerHTML)
+//         })
+//       }
+
+//       function initialize() {
+//         let backgroundColor = localStorage.getItem("backgroundColor")
+//         if (backgroundColor) setBackgroundColor(backgroundColor)
+
+//         let fontColor = localStorage.getItem("fontColor")
+//         if (fontColor) setFontColor(fontColor)
+
+//         let fontSize = localStorage.getItem("fontSize")
+//         if (fontSize) setFontSize(fontSize)
+
+//         let lineHeight = localStorage.getItem("lineHeight")
+//         if (lineHeight) setLineHeight(lineHeight)
+
+//         let fontFamily = localStorage.getItem("fontFamily")
+//         if (fontFamily) setFontFamily(fontFamily)
+//       }
+
+//       initialize()
+//     }

@@ -147,14 +147,27 @@ function taskSubtitle(cor) {
   subtitle.appendChild(div);
 };
 
-taskSubtitle('blue');
+taskSubtitle('green');
+
+function taskYellow(cor) {
+  let currentTask = document.querySelector('.my-tasks');
+  let createDiv = document.createElement('div');
+
+  createDiv.className = 'task';
+  createDiv.style.backgroundColor = cor;
+
+  currentTask.appendChild(createDiv);
+};
+
+taskYellow('yellow');
 
 function divClick() {
-  let task = document.getElementsByClassName('task selected');
+  let selectedTask = document.getElementsByClassName('task selected');
   let myTasks = document.querySelector('.task');
+  console.log(myTasks);
 
   myTasks.addEventListener('click', function(event) {
-    if (tasks.length === 0) {
+    if (selectedTask.length === 0) {
       event.target.className = 'task selected';
     } else {
       event.target.className = 'task';
