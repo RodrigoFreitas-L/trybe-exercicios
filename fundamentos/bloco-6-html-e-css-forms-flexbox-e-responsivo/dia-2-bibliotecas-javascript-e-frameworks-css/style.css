@@ -1,0 +1,73 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+  margin: 25px;
+  color: rgb(107, 107, 107);
+}
+
+main {
+  background-color: antiquewhite;
+  padding-left: 12px;
+}
+
+.info {
+  width: 100%;
+}
+
+#full-name {
+  width: 25%;
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+
+#email {
+  width: 25%;
+}
+
+.where-to-go {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+#why-you {
+  width: 100%;
+}
+
+#date-to-trip {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+#send-button, #clear-button {
+  margin: 12px 0 12px 0;
+  padding: 3px;
+} */
+
+body {
+  background-color: rgb(228, 228, 228);
+}
+
+main {
+  background-color: rgb(202, 202, 202);
+}
+
+header {
+  background-color: rgb(202, 202, 202);
+
+}
+
+.container {
+  margin-bottom: 50px;
+}
+
+/* header {
+  background-color: burlywood;
+  margin: auto;
+  margin-top: 20px;
+  width: fit-content;
+} */

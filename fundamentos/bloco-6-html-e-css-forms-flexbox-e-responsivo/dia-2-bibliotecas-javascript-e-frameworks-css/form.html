@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrybeTrip</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+      <h1 class="container text-center display-3">Concurso TrybeTrip</h1>
+    </header>
+  
+
+  <main class="container">
+    <form class="container" id="form">
+      <div class="mb-3 container">
+        <label class="form-label" for="full-name">Nome:</label>
+        <input class="form-control" data-validate-field="name" type="text" name="full-name" id="full-name">
+        <br>
+        <label class="form-label" for="">E-mail:</label>
+        <input class="form-control" data-validate-field="email" type="email" name="email" id="email">
+      </div>
+
+      <div class="container" id="lugar">
+        <input class="form-check-input" data-validate-field="destination" type="radio" name="local-option" id="lugar_1">
+        <label class="form-check-label" for="cidade">Cidade</label>
+
+        <input class="form-check-input" data-validate-field="destination" type="radio" name="local-option" id="lugar_2">
+        <label class="form-check-label" for="campo">Campo</label>
+
+        <input class="form-check-input" data-validate-field="destination" type="radio" name="local-option" id="lugar_3">
+        <label class="form-check-label" for="praia">Praia</label>
+
+        <input class="form-check-input" data-validate-field="destination" type="radio" name="local-option" id="lugar_4">
+        <label class="form-check-label" for="montanhas">Montanhas</label>
+      </div>
+
+      <div class="form-floating container">
+        <textarea class="form-control" data-validate-field="text" name="answer" id="why-you" cols="30" rows="10" placeholder="Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?"></textarea>
+        <label for="why-you" id="type-answer">Digite sua resposta:</label>
+      </div>
+
+      <div class="container">
+        <label for="datepicker">Qual a melhor data para realizar sua viagem?</label>
+        <input type="text" data-validate-field="date" name="datepicker" id="datepicker" autocomplete="off">
+      </div>
+
+      <div class="container">
+        <input type="checkbox" name="agreements" id="offers">
+        <label for="offers" id="offers-text">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+        <br>
+        <input type="checkbox" name="agreements" id="copyright">
+        <label for="copyright" id="copyright-text">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+      </div>
+
+      <div class="container">
+        <button class="btn btn-primary" type="submit">Enviar</button>
+        <button class="btn btn-warning" type="reset">Limpar todos os campos</button>
+      </div>
+     </form>
+
+  </main>
+  
+  <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
