@@ -17,15 +17,14 @@ body {
 .logo-container {
   display: flex;
   justify-content: center;
-  flex: 0 2 268px;
+  flex: 268px;
   order: 1;
 }
 
 .menu-container {
   display: flex;
-  flex: 2 500px;
+  flex: 1 500px;
   order: 2;
-  align-self: center;
 }
 
 .menu-container ul {
@@ -40,4 +39,57 @@ body {
   font-size: 1.3rem;
   list-style: none;
   margin-right: 10px;
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.movie-container {
+  display: flex;
+  flex-direction: column;
+  flex: 700px;
+  flex-grow: 10;
+}
+
+.movie-container h2 {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card-container div {
+  align-items: center;
+  background-color: #5C687C;
+  border: black solid 1px;
+  display: flex;
+  height: 150px;
+  justify-content: center;
+  margin: 10px;
+  flex: 1 16%;
+}
+
+.aside-container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  flex: 1 350px;
+  align-self: center;
+}
+
+.aside-container h3, h4 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.aside-container p {
+  margin: 10px 0;
+  text-align: justify;
 }
