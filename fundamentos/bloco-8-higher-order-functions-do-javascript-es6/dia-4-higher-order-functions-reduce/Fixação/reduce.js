@@ -114,11 +114,14 @@ console.log(report(estudantes));
 
 // console.log(reportStudentsShift(estudantes));
 
+const reducing = (acc, curr) => acc.nota > curr.nota ? acc : curr;
+
 const mappingStudents = () => {
   return estudantes.map((elements) => (
     {
       name: elements.nome,
-      materia: elements.materias.reduce((acc, curr) => acc.nota > curr.nota ? acc : curr).name
+      materia: elements.materias
+      .reduce((acc, curr) => reducing(acc, curr)).name
     }
   ))
 };
