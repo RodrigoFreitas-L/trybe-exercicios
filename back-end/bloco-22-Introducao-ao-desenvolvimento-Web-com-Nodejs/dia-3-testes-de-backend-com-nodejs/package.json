@@ -1,0 +1,19 @@
+{
+  "name": "dia-3-testes-de-backend-com-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "exercicio1.js",
+  "type": "module",
+  "scripts": {
+    "test": "mocha",
+    "start": "node exercicio1.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "sinon": "^14.0.0"
+  }
+}
